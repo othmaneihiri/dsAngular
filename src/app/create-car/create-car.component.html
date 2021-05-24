@@ -1,0 +1,40 @@
+
+    <div class="col-md-6">
+        <h2 class="text-center">Add Car</h2>
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    
+          <div class="form-group">
+            <label for="marque">Marque:</label>
+            <input formControlName="marque" placeholder="Marque" name="marque" class="form-control" id="marque">
+            <div class="feedback-red" *ngIf="isInvalid('marque')">
+              Marque is empty.
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="immatriculation">Immatriculation:</label>
+            <input formControlName="immatriculation" placeholder="Immatriculation" name="immatriculation" class="form-control" id="immatriculation">
+            <div class="feedback-red" *ngIf="isInvalid('immatriculation')">
+                Immatriculation is empty.
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="sieges">Sieges:</label>
+            <input formControlName="sieges" placeholder="Sieges" name="sieges" class="form-control" id="sieges">
+            <div class="feedback-red" *ngIf="isInvalid('sieges')">
+                Sieges is empty.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="couleur">Couleur:</label>
+            <input formControlName="couleur" placeholder="Couleur" name="couleur" class="form-control" id="couleur">
+            <div class="feedback-red" *ngIf="isInvalid('couleur')">
+                Couleur is empty.
+            </div>
+          </div>
+    
+          <button button [disabled]="addForm.invalid" class="btn btn-success">Submit</button>
+          <button class="btn btn-danger ml-2 " (click)="onCancel()">Cancel</button>
+        </form>
+      </div>

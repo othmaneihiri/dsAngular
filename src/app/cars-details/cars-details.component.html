@@ -1,0 +1,24 @@
+<div class="car-list">  
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Marque</th>
+        <th>Immatriculation</th>
+        <th>Siege</th>
+        <th>Couleur</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let carcon of cars">
+        <td>{{carcon.id}}</td>
+        <td>{{carcon.marque}}</td>
+        <td>{{carcon.immatriculation}}</td>
+        <td>{{carcon.sieges}}</td>
+        <td>{{carcon.couleur}}</td>
+        
+      </tr>
+    </tbody>
+    </table>
+  </div>
